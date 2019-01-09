@@ -27,7 +27,7 @@ resource "aws_internet_gateway" "default" {
 resource "aws_subnet" "ap-southeast-1a-test" {
     vpc_id = "${aws_vpc.default.id}"
 
-    cidr_block = "${var.web_subnet_cidr}"
+    cidr_block = "${var.test_subnet_cidr}"
     availability_zone = "ap-southeast-1a"
 
     tags {
@@ -41,8 +41,6 @@ resource "aws_route_table" "ap-southeast-1a-test" {
     route {
         cidr_block = "0.0.0.0/0"
         gateway_id = "${aws_internet_gateway.default.id}"
-    }
-
     tags {
         Name = "test"
     }
