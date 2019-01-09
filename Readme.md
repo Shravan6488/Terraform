@@ -12,11 +12,21 @@ This terraform code creates the following in AWS Singapore region
 
 
 2. Instances
-	- an Test01 instance to act as a web server with associated eip
+	- an Test01 instance to act as a test server with associated eip
 
-Assumptions: 1. Works only in AWS Singapore region 2. Uses t2.micro instances to spin up all instances except the NAT01 instance 3. Uses Ubuntu 16.04 as the base OS 4. AWS user has full EC2 and VPC permissions 5. You have already created an key-pair in AWS EC2 consolea 6. The 10.0.0.0/16 subnet is not used in existing VPCs. If yes, change it network settings in variables.tf accordingly
+Assumptions: 
+1. Works only in AWS Singapore region 
+2. Uses t2.micro instances to spin up instance 
+3. Uses Ubuntu 16.04 as the base OS 
+4. AWS user has full EC2 and VPC permissions 
+5. You have already created an key-pair in AWS EC2 consolea 
+6. The 10.0.0.0/16 subnet is not used in existing VPCs. If yes, change it network settings in variables.tf accordingly
 
-Inputs Needed: You need to add the following variables to the file terraform.tfvars 1. AWS access_key - access key of aws user with appropriate permissions 2. AWS secret_key - secret key of access key 3. aws_key_path - path to the private key of the aws key-pair on your local machine 4. aws_key_name - name of the aws key-pair
+Inputs Needed: You need to add the following variables to the file terraform.tfvars 
+1. AWS access_key - access key of aws user with appropriate permissions 
+2. AWS secret_key - secret key of access key 
+3. aws_key_path - path to the private key of the aws key-pair on your local machine 
+4. aws_key_name - name of the aws key-pair
 
 How to run the code: 
 
