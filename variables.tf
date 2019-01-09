@@ -20,3 +20,16 @@ variable "test_subnet_cidr" {
     description = "CIDR for the test Public Subnet"
     default = "10.0.0.0/24"
 }
+variable "data_volume1_size" {
+  type = "string"
+  default = "100"
+}
+
+variable "data_volume1_type" {
+  type = "string"
+  default = "gp2"
+}
+
+variable "data_volume1_device_name" {
+  default = "/dev/sdc"
+}
