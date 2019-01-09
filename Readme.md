@@ -1,3 +1,9 @@
+Pre-requisites 
+
+1. git
+2. Terraform
+
+
 This terraform code creates the following in AWS Singapore region
 
 1. VPCs and Subnets
