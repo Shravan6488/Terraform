@@ -131,4 +131,17 @@ resource "aws_eip" "test01" {
     instance = "${aws_instance.test01.id}"
     vpc = true
 }
+variable "data_volume1_size" {
+  type = "string"
+  default = "100"
+}
+
+variable "data_volume1_type" {
+  type = "string"
+  default = "gp2"
+}
+
+variable "data_volume1_device_name" {
+  default = "/dev/sdc"
+}
 
