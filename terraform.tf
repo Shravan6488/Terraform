@@ -126,7 +126,15 @@ resource "aws_instance" "test01" {
         Name = "Test"
     }
 }
-
+resource "aws_volume_attachment" "data_volume1_att" {
+  device_name = "${var.data_volume1_device_name}"
+  volume_id   = "${aws_ebs_volume.data_volume1.id}"
+  instance_id = "${aws_instance.test01.id}"
+  
+}
+tags {
+        Name = "Test"
+    }
 resource "aws_eip" "test01" {
     instance = "${aws_instance.test01.id}"
     vpc = true
